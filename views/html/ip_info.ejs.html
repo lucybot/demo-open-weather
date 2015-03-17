@@ -1,0 +1,11 @@
+<h2>IP Address <%- Lucy.variable('answers.ipAddress') %></h2>
+<%- Lucy.if("result.city") %>
+<%-
+Lucy.include('weather_info', {
+  data: {
+    action: 'get_weather_for_city',
+    answers: {city: {variable: 'result.city'}}
+  }
+})
+%>
+<%- Lucy.fi() %>

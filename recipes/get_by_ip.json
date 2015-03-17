@@ -1,0 +1,33 @@
+{
+"name": "get_by_ip",
+"title": "Weather by IP Address",
+"description": "Combine the Telize and Open Weather Map APIs to look up weather based on IP Address.",
+"free": true,
+"mashup": true,
+"views": ["ip_info", "weather_info"],
+"actions": ["telize_ip_lookup", "get_weather_for_city"],
+"pages": [{
+    "view": "ip_info",
+    "data": {
+        "action": "telize_ip_lookup"
+    }
+}],
+"control_sets": [{
+  "title": "Getting Location from IP",
+  "tip": "Use the Telize API to lookup the location for a given IP Address",
+  "affects": "telize_ip_lookup",
+  "inputs": [{
+    "name": "ipAddress",
+    "label": "IP Address",
+    "type": "text",
+    "default": "8.8.8.8"
+  }]
+}, {
+  "title": "Getting weather from location",
+  "tip": "Use the Open Weather Map API to get weather data from the city returned by Telize",
+  "affects": "get_weather_for_city"
+}, {
+  "title": "Here's how you can display the results",
+  "affects": "weather_info"
+}]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "get_weather",
+  "title": "Current Weather",
+  "description": "Use the Open Weather Map API to get the current weather for a given city",
+  "free": true,
+  "views": ["weather_info"],
+  "actions": ["get_weather_for_city"],
+  "pages": [{
+    "view": "weather_info",
+    "data": {
+      "action": "get_weather_for_city"
+    }
+  }],
+  "control_sets": [{
+    "title": "Retrieving current weather conditions",
+    "affects": "get_weather_for_city",
+    "inputs": [{
+      "name": "city",
+      "label": "City Name",
+      "type": "text",
+      "default": "London"
+    }]
+  }]
+}

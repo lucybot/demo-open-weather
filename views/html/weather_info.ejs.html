@@ -1,0 +1,6 @@
+<h2>Current weather in <%- Lucy.code.variable("result.name") %></h2>
+<img src="http://openweathermap.org/img/w/<%- Lucy.code.variable('result.weather[0].icon') %>.png">
+<h4><%- Lucy.code.variable("result.weather[0].main") %></h4>
+<p><%- Lucy.code.variable("result.weather[0].description") %></p>
+<p>Temperature: <%- Lucy.code.variable("result.main.temp") %> &deg;F</p>
+<p>Wind Speed: <%- Lucy.code.variable("result.wind.speed") %> m/s</p>
