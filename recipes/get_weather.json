@@ -3,6 +3,7 @@
   "title": "Current Weather",
   "description": "Use the Open Weather Map API to get the current weather for a given city",
   "free": true,
+  "force_insecure": true,
   "views": ["weather_info"],
   "actions": ["get_weather_for_city"],
   "pages": [{
@@ -20,5 +21,8 @@
       "type": "text",
       "default": "London"
     }]
+  }, {
+    "title": "Here's one way to display the results",
+    "affects": "weather_info"
   }]
 }

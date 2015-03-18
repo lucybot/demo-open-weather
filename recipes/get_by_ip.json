@@ -4,6 +4,7 @@
 "description": "Combine the Telize and Open Weather Map APIs to look up weather based on IP Address.",
 "free": true,
 "mashup": true,
+"force_insecure": true,
 "views": ["ip_info", "weather_info"],
 "actions": ["telize_ip_lookup", "get_weather_for_city"],
 "pages": [{
